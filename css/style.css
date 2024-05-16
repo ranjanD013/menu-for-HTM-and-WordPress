@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background: #ccc;
+}
+p { color:#6d757e;}
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+}
+a,
+a:active,
+a:focus {
+    color: #333;
+    text-decoration: none;
+    transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* top section css */
+.topmenu {
+    width: 100%;
+    max-width: 1480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;  
+    position: relative;
+    background: rgba(0, 0, 0, .5);
+    background: #efeeff;
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 150px;
+   
+}
+
+.logo a {    
+    display: block;
+    text-decoration: none;
+    
+}
+
+/* top section css */
+
+/* menu css */
+.topnav {
+    overflow: hidden;
+    background: #efeeff;
+    position: relative;
+    width: 700px;
+
+
+}
+
+.topnav ul li a {
+    float: left;
+    display: block;
+    color: #121212;
+    text-align: center;
+    padding: 5px 0px;
+    margin: 0 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+.topnav ul li a:hover,
+.topnav ul li a.active {
+    color: #121212;
+    /* background: #fff; */
+    color: #cc0001;
+
+}
+
+.topnav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #cc0001;
+    transition: width .5s;
+}
+
+.topnav ul li a:hover::after {
+    width: 100%;
+}
+
+.topnav ul li a.active::after {
+    width: 100%;
+}
+
+.topnav .barBox {
+    display: none;
+}
+
+/* bar css  */
+.barBox {
+    display: inline-block;
+    cursor: pointer;
+    width: auto;
+    padding: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 7px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -7px) rotate(45deg);
+}
+
+
+.barBox {
+    display: none;
+}
+/* bar css end */
+
+/* menu css end */
+
+@media(max-width:768px){
+    /* menu  */
+    .topnav.responsive {  overflow: inherit; }
+    .topnav.responsive .mobileWrap {margin-top: 15px; }
+    .topnav ul li a {    display: none;    }
+    .topnav .barBox { display: block; float: right; }
+    .topnav.responsive .barBox {position: absolute;right: 0;top: 0;padding: 10px;}
+    .topnav.responsive {position: relative; }
+    .topnav.responsive a { float: none; display: block; text-align: left; }    
+    .topmenu { display: block; }
+    .clk_btn { display: inline-block; margin-top: 10px; margin-right: 0; position: absolute; right: 47px; top:0; }
+    .topnav { position: absolute; right: 0; top: 0; margin-top: 0;}
+    
+    .barBox { display: inline-block;}
+    .barBox {padding: 10px 0;  position: absolute;   right: 16px; }
+    
+    .logo { display: inline-block; }
+    .logo a {   padding: 0px;margin-bottom: 0px; }
+    header { padding: 15px 15px; }
+    /* menu  end*/
+   
+    
+    }
